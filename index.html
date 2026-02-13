@@ -141,6 +141,7 @@ const SHADOW_OFFSET_X = 14 * BALL_SCALE;
 const SHADOW_OFFSET_Y = 16 * BALL_SCALE;
 
 // Highlight
+const HIGHLIGHT_OPACITY = 0.8;
 const HIGHLIGHT_SRC = "./highlight.png";
 const HIGHLIGHT_SIZE = 44 * BALL_SCALE;
 const HIGHLIGHT_OFFSET_X = 0;
@@ -248,6 +249,7 @@ for (let s = 0; s < BALL_ANIM_SETS.length; s++) {
 }
 
 // Highlight image
+ctx.globalAlpha = HIGHLIGHT_OPACITY;
 const highlightImg = new Image();
 highlightImg.src = HIGHLIGHT_SRC;
 let highlightReady = false;
@@ -514,3 +516,4 @@ step();
 </script>
 </body>
 </html>
+
