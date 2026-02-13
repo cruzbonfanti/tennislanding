@@ -249,7 +249,6 @@ for (let s = 0; s < BALL_ANIM_SETS.length; s++) {
 }
 
 // Highlight image
-ctx.globalAlpha = HIGHLIGHT_OPACITY;
 const highlightImg = new Image();
 highlightImg.src = HIGHLIGHT_SRC;
 let highlightReady = false;
@@ -495,7 +494,7 @@ function step() {
   for (const b of balls) drawBallSprite(b);
 
   if (highlightReady) {
-    ctx.globalAlpha = 0.9;
+    ctx.globalAlpha = HIGHLIGHT_OPACITY;
     for (const b of balls) {
       const d = HIGHLIGHT_SIZE * b.vScale;
       ctx.drawImage(
@@ -516,4 +515,3 @@ step();
 </script>
 </body>
 </html>
-
